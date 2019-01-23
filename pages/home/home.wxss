@@ -1,0 +1,35 @@
+/* 顶部选项卡全局样式 */
+.nav-items{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 主轴排列方式 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 项目的主轴上的对齐方式 */
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  /* 高度 */
+  height: 90rpx;
+  /* 背景色 */
+  background-color: #F5F5F5;
+}
+/* 设置选项卡的单个样式 */
+.nav-items>.nav-item{
+  /* 每一个选项卡的宽度 */
+  width: 25%;
+  /* 选项卡子题居中 */
+  text-align: center;
+  /* 选项卡字体 */
+  font-family: '微软雅黑';
+  /* 设置行高 */
+  line-height: 90rpx;
+}
+/* 顶部选项卡点击效果样式 */
+.item-on{
+  /* 设置选中的下划线宽度 */
+  border-bottom: solid red 4rpx;
+  /* 设置选中的字体颜色 */
+  color: red;
+}

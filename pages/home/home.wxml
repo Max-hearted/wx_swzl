@@ -1,0 +1,18 @@
+<view class='nav-items'>
+  <view class='nav-item {{current==0?"item-on":""}}' data-current='0' catchtap='click_nav'>寻物启事</view>
+  <view class='nav-item {{current==1?"item-on":""}}' data-current='1' catchtap='click_nav'>寻人启事</view>
+  <view class='nav-item {{current==2?"item-on":""}}' data-current='2' catchtap='click_nav'>寻宠启事</view>
+  <view class='nav-item {{current==3?"item-on":""}}' data-current='3' catchtap='click_nav'>失物招领</view>
+</view>
+<!-- 
+  内容区 
+  current: 展示当前滑块中的哪一个 swiper-item 从0开始
+  duration: 滑块滑动的动画时间
+  bindchange: 当swiper的current属性改变时触发bindchange事件
+-->
+<swiper current='{{current}}' duration='600' bindchange='bindchange'>
+  <swiper-item>寻物启事</swiper-item>
+  <swiper-item>寻人启事</swiper-item>
+  <swiper-item>寻宠启事</swiper-item>
+  <swiper-item>失物招领</swiper-item>
+</swiper>
