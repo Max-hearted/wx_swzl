@@ -5,14 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current:0
+    current:0,
+    windowHeight:0,
+    windowWidth:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    //获取系统高度
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          windowHeight:res.windowHeight-45,
+          windowWidth:res.windowWidth
+        });
+      },
+    })
   },
 
   /**

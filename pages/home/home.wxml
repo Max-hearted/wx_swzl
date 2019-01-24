@@ -10,9 +10,25 @@
   duration: 滑块滑动的动画时间
   bindchange: 当swiper的current属性改变时触发bindchange事件
 -->
-<swiper current='{{current}}' duration='600' bindchange='bindchange'>
-  <swiper-item>寻物启事</swiper-item>
-  <swiper-item>寻人启事</swiper-item>
-  <swiper-item>寻宠启事</swiper-item>
-  <swiper-item>失物招领</swiper-item>
+<swiper current='{{current}}' duration='600' bindchange='bindchange' style='height:{{windowHeight}}px'>
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+      <view>寻物启事</view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+      寻人启事
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+      寻宠启事
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+      失物招领
+    </scroll-view>
+  </swiper-item>
 </swiper>
