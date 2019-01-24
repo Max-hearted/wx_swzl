@@ -3,11 +3,48 @@ Page({
 
   /**
    * 页面的初始数据
+   * current ： 
+   * 0->寻人启事
+   * 1->寻物启事
+   * 2->寻宠启事
+   * 3->失物招领
    */
   data: {
     current:0,
     windowHeight:0,
-    windowWidth:0
+    windowWidth:0,
+    page: {
+      "target": 0,
+      "hasnext": true,
+      "pageno": 1,
+      "pagesize": 20,
+      "items": [
+        {
+          "id": 1001,
+          "title": "学府路丢失银白色笔记本电脑一台",
+          "user": {
+            "id": 2001,
+            "name": "李雷",
+            "email": "hd1611756908@163.com"
+          },
+          "category": "电脑",
+          "itemtype": {
+            "id": 4001,
+            "name": "寻物启事"
+          },
+          "province": "哈尔滨市-南岗区",
+          "address": "黑龙江省哈尔滨市南岗区学府路550号哈尔滨理工大学一号楼3层301",
+          "createtime": "2018-12-12 22:22:22",
+          "losetime": "2018年12月12日晚",
+          "imgs": [
+            "https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg",
+            "https://img.alicdn.com/imgextra/i4/773923628/O1CN011cffNakLNEENTAW_!!773923628.jpg",
+            "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
+          ],
+          "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
+        }
+      ]
+    }
   },
 
   /**

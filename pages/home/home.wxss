@@ -33,3 +33,32 @@
   /* 设置选中的字体颜色 */
   color: red;
 }
+/* 项目列表 */
+.items-list{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 主轴排列方式 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 居中显示 */
+  justify-content: center;
+  /* 垂直居中 */
+  align-items: center;
+  /* 设置内边距 */
+  padding: 15rpx 5rpx 0 5rpx;
+}
+.items-list>.item-img{
+  width: 30%;
+  height: 230rpx;
+}
+.item-img>image{
+  width: 230rpx;
+  height: 230rpx;
+  border-radius: 10rpx;
+}
+.items-list>.item-desc{
+  width: 70%;
+  background-color: blue;
+  height: 230rpx;
+}

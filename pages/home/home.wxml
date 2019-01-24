@@ -12,22 +12,29 @@
 -->
 <swiper current='{{current}}' duration='600' bindchange='bindchange' style='height:{{windowHeight}}px'>
   <swiper-item>
-    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
-      <view>寻物启事</view>
+    <scroll-view wx:if='{{page.target==0}}' scroll-y='true' style='height:{{windowHeight}}px'>
+      <view class='items-list'>
+          <view class='item-img'>
+            <image src='https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg' mode='aspectFill'></image>
+          </view>
+          <view class='item-desc'>
+              
+          </view>
+      </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
-    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+    <scroll-view wx:if='{{page.target==1}}' scroll-y='true' style='height:{{windowHeight}}px'>
       寻人启事
     </scroll-view>
   </swiper-item>
   <swiper-item>
-    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+    <scroll-view wx:if='{{page.target==2}}' scroll-y='true' style='height:{{windowHeight}}px'>
       寻宠启事
     </scroll-view>
   </swiper-item>
   <swiper-item>
-    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
+    <scroll-view wx:if='{{page.target==3}}' scroll-y='true' style='height:{{windowHeight}}px'>
       失物招领
     </scroll-view>
   </swiper-item>
