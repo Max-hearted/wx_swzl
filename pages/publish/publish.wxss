@@ -1,1 +1,184 @@
-/* pages/publish/publish.wxss */
+page{
+  background-color: #ccc;
+}
+/* 标题样式 */
+.title{
+  /* 上边距 */
+  margin-top: 15rpx;
+  /* 标题栏高度 */
+  height: 60rpx;
+  /* 内边距 */
+  padding: 10rpx;
+  /* 背景色 */
+  background-color: #fff;
+}
+/* 其实类型样式 */
+.qs-style{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 水平展示 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 水平排列方式 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 背景色 */
+  background-color: white;
+  /* 上边距 */
+  margin-top: 3rpx;
+}
+.qs-name{
+  padding: 14rpx 0;
+  margin-left: 10rpx;
+  /* 设置字体样式 */
+  font-family: '微软雅黑';
+  /* 字体大小 */
+  font-size: 36rpx;
+}
+.qs-value{
+  padding: 14rpx 0;
+  margin-right: 10rpx;
+  /* 设置字体样式 */
+  font-family: '微软雅黑';
+  /* 字体大小 */
+  font-size: 36rpx;
+}
+.category{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 水平展示 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 水平排列方式 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 背景色 */
+  background-color: white;
+  /* 上边距 */
+  margin-top: 3rpx;
+}
+.category-value{
+  /* 上下内边距 */
+  padding: 14rpx 0;
+  /* 右边距 */
+  margin-right: 10rpx;
+  /* 设置输入文本以及光标靠右侧开始 */
+  text-align: right;
+}
+.publish{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 水平展示 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 水平排列方式 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 背景色 */
+  background-color: white;
+  /* 上边距 */
+  margin-top: 13rpx;
+}
+/* 具体地点 */
+.qs-address{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 水平展示 */
+  flex-direction: column;
+  /* 内边距 */
+  padding: 14rpx 10rpx 14rpx 10rpx;
+  /* 背景色 */
+  background-color: #fff;
+  /* 上边距 */
+  margin-top: 3rpx;
+}
+/* 内容区 */
+.add-value{
+  width: 100%;
+  height: 100%;
+}
+/* 失物详情 */
+.qs-detail{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 水平展示 */
+  flex-direction: column;
+  /* 内边距 */
+  padding: 14rpx 10rpx 14rpx 10rpx;
+  /* 背景色 */
+  background-color: #fff;
+  /* 上边距 */
+  margin-top: 13rpx;
+}
+/* 图片样式设置 */
+.qs-img{
+  /* 弹性盒子模型 */
+  display: flex;
+  /* 列布局 */
+  flex-direction: column;
+  /* 内边距 */
+  padding: 14rpx 10rpx 14rpx 10rpx;
+  /* 背景色 */
+  background-color: #fff;
+  /* 上边距 */
+  margin-top: 3rpx;
+}
+/* 添加图片的图标设置 */
+.add-icon{
+  height: 150rpx;
+  width: 150rpx;
+  background: rgb(211, 209, 209);
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.h-icon{
+  position: absolute;
+  width: 130rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background-color: #fff;
+  top: 70rpx;
+  left: 10rpx;
+}
+.s-icon{
+  position: absolute;
+  width: 10rpx;
+  height: 130rpx;
+  border-radius: 5rpx;
+  background-color: #fff;
+  top: 10rpx;
+  left: 70rpx;
+}
+.img-detail{
+  margin-top:10rpx; 
+  width: 100%;
+}
+/* 设置图片样式 */
+.img-detail>image{
+  /* 宽度 */
+  width: 100%;
+}
+/* 按钮样式 */
+.btn-area{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 水平线排列 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+
+}
+.btn-area>button{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: 40rpx;
+  font-weight: bold;
+}

@@ -1,2 +1,64 @@
-<!--pages/publish/publish.wxml-->
-<text>pages/publish/publish.wxml</text>
+<form bindsubmit='formSubmit' bindreset='formReset'>
+  <!-- 标题 -->
+  <input placeholder-style="font-size:20rpx;color:#ccc;" class='title' name="title" placeholder="请输入标题" />
+  <!-- 启事类型选择器 -->
+  <picker bindchange='bindchangestyle' mode='selector' range='{{array}}' name='itemtype' value='{{array[index].id}}' range-key='name'>
+    <view class='qs-style'>
+      <view class='qs-name'>启事类型 </view> <view class='qs-value'>{{array[index].name}}</view>
+      </view>
+  </picker>
+  <!-- 物品种类 -->
+  <view class='category'>
+    <view class='category-name qs-name'>物品种类 </view>
+    <input class='category-value' name='category' placeholder-style="text-align:right;font-size: 36rpx;" placeholder='钱包'></input>
+  </view>
+
+  <!-- 发布人同微信名不允许修改 -->
+  <view class='publish'>
+      <view class='qs-name'>发布人 </view> <input name='username' class='category-value' disabled='true' value='姑苏城外一书生'></input>
+  </view>
+
+  <!-- 丢失日期 -->
+  <picker mode = 'date' name='losetime' start='1970-01-01' value='{{date}}' bindchange='bindchangedate'>
+    <view class='qs-style'>
+      <view class='qs-name'>遗失日期 </view> <view class='qs-value'>{{date}}</view>
+    </view>
+  </picker>
+
+  <!-- 丢失地区 -->
+  <picker mode = 'region' name='province' value='{{region}}' bindchange='bindchangeregion'>
+    <view class='publish'>
+    <view class='qs-name'>选择地区 </view> <view class='qs-value'>{{region[0]}}-{{region[1]}}-{{region[2]}}</view>
+   </view>
+  </picker> 
+  <!-- 具体地点 -->
+  <view class='qs-address'>
+      <view class='add-name'>具体地点 </view>
+      <textarea class='add-value' bindblur='bindbluraddress' placeholder='具体地点 如 火车站，汽车站等' placeholder-style='color:#ccc;font-size:10rpx;' auto-height></textarea>
+  </view>
+  <!-- 失物详情 -->
+  <view class='qs-detail'>
+      <view class='add-name'>失物详情 </view>
+      <textarea class='add-value' bindblur='bindbluraddress' placeholder='请输入详细信息' placeholder-style='color:#ccc;font-size:10rpx;' auto-height></textarea>
+  </view>
+  <!-- 图片上传 -->
+  <view class='qs-img'>
+    <view class='add-name'>添加图片</view>
+    <view class='add-name'>
+      <view class='add-icon'>
+        <view class='h-icon'></view>
+        <view class='s-icon'></view>
+      </view>
+    </view>
+    <view class='img-detail'>
+      <image mode='aspectFit'  src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548410497301&di=c5313414914569aa07e5d715c52c6c60&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F764905ead01e7eca298fdadb745b3c4fd9031e2839a0d-Hdjzwh_fw658'></image>
+      <image mode='aspectFit'  src='https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg'></image>
+      <image mode='aspectFit'  src='https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg'></image>
+    </view>
+  </view>
+
+  <view class="btn-area">
+    <button form-type="submit">发布</button>
+    <button form-type="reset">重置</button>
+  </view>
+</form>
