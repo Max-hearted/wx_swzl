@@ -10,81 +10,91 @@
   duration: 滑块滑动的动画时间
   bindchange: 当swiper的current属性改变时触发bindchange事件
 -->
-<swiper current='{{current}}' duration='600' bindchange='bindchange' style='height:{{windowHeight}}px'>
+<swiper circular='true' current='{{current}}' duration='600' bindchange='bindchange' style='height:{{windowHeight}}px'>
   <swiper-item>
-    <scroll-view wx:if='{{page.target==0}}' scroll-y='true' style='height:{{windowHeight}}px'>
-      <block wx:for='{{page.items}}' wx:key='' wx:for-item='item'>
-        <view class='items-list'>
-            <view class='item-img'>
-              <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
+    <scroll-view scroll-y='true' style='height:100%'>
+      <view class='list'>
+        <block wx:for='{{page.xw.items}}' wx:key='' wx:for-item='item'>
+          <navigator url='/pages/detail/detail?id={{item.id}}'>
+            <view class='items-list'>
+              <view class='item-img'>
+                <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
+              </view>
+              <view class='item-desc'>
+                  <view class='item-title'>{{item.title}}</view>
+                  <view class='item-type-time'>
+                    <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
+                  </view>
+                  <view class='item-ares'>地区: {{item.province}}</view>
+                  <view class='item-detail'>详情: {{item.detaildesc}}</view>
+              </view>
             </view>
-            <view class='item-desc'>
-                <view class='item-title'>{{item.title}}</view>
-                <view class='item-type-time'>
-                  <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
-                </view>
-                <view class='item-ares'>地区: {{item.province}}</view>
-                <view class='item-detail'>详情: {{item.detaildesc}}</view>
-            </view>
-        </view>
-      </block>
+          </navigator>
+        </block>
+      </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
-    <scroll-view wx:if='{{page.target==1}}' scroll-y='true' style='height:{{windowHeight}}px'>
-      <block wx:for='{{page.items}}' wx:key='' wx:for-item='item'>
-        <view class='items-list'>
-            <view class='item-img'>
-              <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
-            </view>
-            <view class='item-desc'>
-                <view class='item-title'>{{item.title}}</view>
-                <view class='item-type-time'>
-                  <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
-                </view>
-                <view class='item-ares'>地区: {{item.province}}</view>
-                <view class='item-detail'>详情: {{item.detaildesc}}</view>
-            </view>
-        </view>
-      </block>
+    <scroll-view scroll-y='true' style='height:100%'>
+      <view class='list'>
+        <block wx:for='{{page.xr.items}}' wx:key='' wx:for-item='item'>
+          <view class='items-list'>
+              <view class='item-img'>
+                <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
+              </view>
+              <view class='item-desc'>
+                  <view class='item-title'>{{item.title}}</view>
+                  <view class='item-type-time'>
+                    <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
+                  </view>
+                  <view class='item-ares'>地区: {{item.province}}</view>
+                  <view class='item-detail'>详情: {{item.detaildesc}}</view>
+              </view>
+          </view>
+        </block>
+      </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
-    <scroll-view wx:if='{{page.target==2}}' scroll-y='true' style='height:{{windowHeight}}px'>
-      <block wx:for='{{page.items}}' wx:key='' wx:for-item='item'>
-        <view class='items-list'>
-            <view class='item-img'>
-              <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
-            </view>
-            <view class='item-desc'>
-                <view class='item-title'>{{item.title}}</view>
-                <view class='item-type-time'>
-                  <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
-                </view>
-                <view class='item-ares'>地区: {{item.province}}</view>
-                <view class='item-detail'>详情: {{item.detaildesc}}</view>
-            </view>
-        </view>
-      </block>
+    <scroll-view scroll-y='true' style='height:100%'>
+      <view class='list'>
+        <block wx:for='{{page.xc.items}}' wx:key='' wx:for-item='item'>
+          <view class='items-list'>
+              <view class='item-img'>
+                <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
+              </view>
+              <view class='item-desc'>
+                  <view class='item-title'>{{item.title}}</view>
+                  <view class='item-type-time'>
+                    <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
+                  </view>
+                  <view class='item-ares'>地区: {{item.province}}</view>
+                  <view class='item-detail'>详情: {{item.detaildesc}}</view>
+              </view>
+          </view>
+        </block>
+      </view>
     </scroll-view>
   </swiper-item>
   <swiper-item>
-    <scroll-view wx:if='{{page.target==3}}' scroll-y='true' style='height:{{windowHeight}}px'>
-      <block wx:for='{{page.items}}' wx:key='' wx:for-item='item'>
-        <view class='items-list'>
-            <view class='item-img'>
-              <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
-            </view>
-            <view class='item-desc'>
-                <view class='item-title'>{{item.title}}</view>
-                <view class='item-type-time'>
-                  <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
-                </view>
-                <view class='item-ares'>地区: {{item.province}}</view>
-                <view class='item-detail'>详情: {{item.detaildesc}}</view>
-            </view>
-        </view>
-      </block>
+    <scroll-view scroll-y='true' style='height:100%'>
+      <view class='list'>
+        <block wx:for='{{page.sz.items}}' wx:key='' wx:for-item='item'>
+          <view class='items-list'>
+              <view class='item-img'>
+                <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
+              </view>
+              <view class='item-desc'>
+                  <view class='item-title'>{{item.title}}</view>
+                  <view class='item-type-time'>
+                    <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
+                  </view>
+                  <view class='item-ares'>地区: {{item.province}}</view>
+                  <view class='item-detail'>详情: {{item.detaildesc}}</view>
+              </view>
+          </view>
+        </block>
+      </view>
     </scroll-view>
   </swiper-item>
 </swiper>

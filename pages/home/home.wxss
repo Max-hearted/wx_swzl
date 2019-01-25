@@ -48,6 +48,15 @@
   /* 设置内边距 */
   padding: 15rpx 5rpx 0 5rpx;
 }
+.list{
+  position: absolute;
+  overflow: auto;
+  margin: auto;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .item-img>image{
   /* 设置成块状元素 */
   display: block;
