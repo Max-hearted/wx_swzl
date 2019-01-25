@@ -164,14 +164,15 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    // 停止下拉刷新
+    wx.stopPullDownRefresh();
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
@@ -184,10 +185,11 @@ Page({
    * 点击顶部选项卡事件
    */
   click_nav:function(e){
+    var that = this;
     //获取选项卡点击事件触发后传送过来的参数
     var nav = e.currentTarget.dataset.current;
     //将参数赋值给前端选项卡控制样式显示
-    this.setData({
+    that.setData({
       current:nav
     });
   },
@@ -198,13 +200,6 @@ Page({
     this.setData({
       current: e.detail.current
     });
-  },
-  /**
-   * 下拉刷新
-   */
-  onPullDownRefresh:function(){
-    console.log("下拉刷新");
-    // 停止下拉刷新
-    wx.stopPullDownRefresh();
   }
+
 })
