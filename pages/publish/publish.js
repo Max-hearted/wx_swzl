@@ -13,7 +13,10 @@ Page({
       {id:1004,name:"失物招领"}
     ],
     date:'2019-01-01',
-    region: ['广东省', '广州市', '海珠区']
+    region: ['上海市', '上海市', '闸北区'],
+    address:'',
+    detaildesc:'',
+    imgs:[]
   },
 
   /**
@@ -74,13 +77,31 @@ Page({
   /**
    * 提交表单事件
    */
-  formSubmit(e) {
+  formSubmit:function(e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    //标题
+    var title = e.detail.value.title;
+    //启事类型
+    var itemtypeid = this.data.array[this.data.index].id;
+    //物品种类
+    var category = e.detail.value.category;
+    //发布人
+    var username = e.detail.value.username;
+    //遗失日期
+    var losetime = e.detail.value.losetime;
+    //选择地区
+    var province = e.detail.value.province;
+    //具体地点
+    var address = this.data.address;
+    //失物详情
+    var detaildesc = this.data.detaildesc;
+    //图片
+    var imgs = [];
   },
   /**
    * 重置表单事件
    */
-  formReset() {
+  formReset:function() {
     console.log('form发生了reset事件')
   },
   /**
@@ -111,6 +132,27 @@ Page({
    * 具体地点
    */
   bindbluraddress:function(e){
-    console.log(e.detail.value);
+    this.setData({
+      address: e.detail.value
+    });
+  },
+  /**
+   * 失物详情
+   */
+  bindblurdetail:function(e){
+    this.setData({
+      detaildesc: e.detail.value
+    });
+  },
+  /**
+   * 选择图片
+   */
+  chooseImage:function(e){
+    console.log("选择图片",e);
+    wx.chooseImage({
+      success: function(res) {
+        console.log(res);
+      },
+    })
   }
 })

@@ -39,12 +39,12 @@
   <!-- 失物详情 -->
   <view class='qs-detail'>
       <view class='add-name'>失物详情 </view>
-      <textarea class='add-value' bindblur='bindbluraddress' placeholder='请输入详细信息' placeholder-style='color:#ccc;font-size:10rpx;' auto-height></textarea>
+      <textarea class='add-value' bindblur='bindblurdetail' placeholder='请输入详细信息' placeholder-style='color:#ccc;font-size:10rpx;' auto-height></textarea>
   </view>
   <!-- 图片上传 -->
   <view class='qs-img'>
     <view class='add-name'>添加图片</view>
-    <view class='add-name'>
+    <view class='add-name' bindtap='chooseImage'>
       <view class='add-icon'>
         <view class='h-icon'></view>
         <view class='s-icon'></view>
