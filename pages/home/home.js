@@ -40,111 +40,6 @@ Page({
 "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
 ],
             "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
-          }, {
-            "id": 1001,
-            "title": "学府路丢失银白色笔记本电脑一台",
-            "user": {
-              "id": 2001,
-              "name": "李雷",
-              "email": "hd1611756908@163.com"
-            },
-            "category": "电脑",
-            "itemtype": {
-              "id": 4001,
-              "name": "寻物启事"
-            },
-            "province": "哈尔滨市-南岗区",
-            "address": "黑龙江省哈尔滨市南岗区学府路550号哈尔滨理工大学一号楼3层301",
-            "createtime": "2018-12-12 22:22:22",
-            "losetime": "2018-12-12",
-            "imgs": ["https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg", "https://img.alicdn.com/imgextra/i4/773923628/O1CN011cffNakLNEENTAW_!!773923628.jpg",
-              "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
-            ],
-            "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
-          }, {
-            "id": 1001,
-            "title": "学府路丢失银白色笔记本电脑一台",
-            "user": {
-              "id": 2001,
-              "name": "李雷",
-              "email": "hd1611756908@163.com"
-            },
-            "category": "电脑",
-            "itemtype": {
-              "id": 4001,
-              "name": "寻物启事"
-            },
-            "province": "哈尔滨市-南岗区",
-            "address": "黑龙江省哈尔滨市南岗区学府路550号哈尔滨理工大学一号楼3层301",
-            "createtime": "2018-12-12 22:22:22",
-            "losetime": "2018-12-12",
-            "imgs": ["https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg", "https://img.alicdn.com/imgextra/i4/773923628/O1CN011cffNakLNEENTAW_!!773923628.jpg",
-              "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
-            ],
-            "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
-          }, {
-            "id": 1001,
-            "title": "学府路丢失银白色笔记本电脑一台",
-            "user": {
-              "id": 2001,
-              "name": "李雷",
-              "email": "hd1611756908@163.com"
-            },
-            "category": "电脑",
-            "itemtype": {
-              "id": 4001,
-              "name": "寻物启事"
-            },
-            "province": "哈尔滨市-南岗区",
-            "address": "黑龙江省哈尔滨市南岗区学府路550号哈尔滨理工大学一号楼3层301",
-            "createtime": "2018-12-12 22:22:22",
-            "losetime": "2018-12-12",
-            "imgs": ["https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg", "https://img.alicdn.com/imgextra/i4/773923628/O1CN011cffNakLNEENTAW_!!773923628.jpg",
-              "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
-            ],
-            "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
-          }, {
-            "id": 1001,
-            "title": "学府路丢失银白色笔记本电脑一台",
-            "user": {
-              "id": 2001,
-              "name": "李雷",
-              "email": "hd1611756908@163.com"
-            },
-            "category": "电脑",
-            "itemtype": {
-              "id": 4001,
-              "name": "寻物启事"
-            },
-            "province": "哈尔滨市-南岗区",
-            "address": "黑龙江省哈尔滨市南岗区学府路550号哈尔滨理工大学一号楼3层301",
-            "createtime": "2018-12-12 22:22:22",
-            "losetime": "2018-12-12",
-            "imgs": ["https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg", "https://img.alicdn.com/imgextra/i4/773923628/O1CN011cffNakLNEENTAW_!!773923628.jpg",
-              "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
-            ],
-            "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
-          }, {
-            "id": 1001,
-            "title": "学府路丢失银白色笔记本电脑一台",
-            "user": {
-              "id": 2001,
-              "name": "李雷",
-              "email": "hd1611756908@163.com"
-            },
-            "category": "电脑",
-            "itemtype": {
-              "id": 4001,
-              "name": "寻物启事"
-            },
-            "province": "哈尔滨市-南岗区",
-            "address": "黑龙江省哈尔滨市南岗区学府路550号哈尔滨理工大学一号楼3层301",
-            "createtime": "2018-12-12 22:22:22",
-            "losetime": "2018-12-12",
-            "imgs": ["https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg", "https://img.alicdn.com/imgextra/i4/773923628/O1CN011cffNakLNEENTAW_!!773923628.jpg",
-              "https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg"
-            ],
-            "detaildesc": "在女人街kfc到成龙影院中间丢失2000年1月16日男性身份证一张，没有其他附加品，身份证为320121开头，本人为应届高考生希望能快点拿到，可支付一定酬劳"
           }
         ]
       },
@@ -289,6 +184,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    
     // 停止下拉刷新
     wx.stopPullDownRefresh();
   },
@@ -297,7 +193,93 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log("===下一页===");
+    var that = this;
+    var current = that.data.current;
+
+    switch(current){
+      case 0:
+        // 寻物启事xw
+        console.log("0",current);
+        var xw = that.data.page.xw;
+        // 判断是否有下一页,如果有加载下一页,如果没有不需要加载
+        var hasnext = xw.hasnext;
+        // 当前页
+        var pageno = xw.pageno;
+        // 页容量
+        var pagesize = wx.pagesize;
+        // 如果有下一页那么加载…
+        if(hasnext){
+            pageno+=1;
+        }
+
+
+        console.log(xw);
+        break;
+      case 1:
+        //寻人
+        console.log("1",current);
+        var xr = that.data.page.xr;
+        // 判断是否有下一页,如果有加载下一页,如果没有不需要加载
+        var hasnext = xr.hasnext;
+        // 当前页
+        var pageno = xr.pageno;
+        // 页容量
+        var pagesize = xr.pagesize;
+        // 如果有下一页那么加载…
+        if (hasnext) {
+          pageno += 1;
+        }
+
+
+        console.log(xr);
+        break;
+      case 2:
+        //寻宠
+        console.log("2",current);
+        var xc = that.data.page.xc;
+        // 判断是否有下一页,如果有加载下一页,如果没有不需要加载
+        var hasnext = xc.hasnext;
+        // 当前页
+        var pageno = xc.pageno;
+        // 页容量
+        var pagesize = xc.pagesize;
+        // 如果有下一页那么加载…
+        if (hasnext) {
+          pageno += 1;
+        }
+
+
+        console.log(xc);
+        break;
+      case 3:
+        //失物招领
+        console.log("3",current);
+        var sz = that.data.page.sz;
+        // 判断是否有下一页,如果有加载下一页,如果没有不需要加载
+        var hasnext = sz.hasnext;
+        // 当前页
+        var pageno = sz.pageno;
+        // 页容量
+        var pagesize = sz.pagesize;
+        // 如果有下一页那么加载…
+        if (hasnext) {
+          pageno += 1;
+        }
+
+
+        console.log(sz);
+        break;
+      default:
+        console.log("current不存在",current);
+    }
+    // 显示加载图标
+    wx.showLoading({
+      title: '玩命加载中'
+    });
+    // 图标延时
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000);
   },
 
   /**
