@@ -1,0 +1,63 @@
+<!-- 标题 -->
+<view class='title'>
+  {{result.title}}
+</view>
+<!-- 发布者 -->
+<view class='publish'>
+  <view class='publish-name'>发布者: </view>
+  <view class='publish-value'>{{result.user.name}}</view>
+</view>
+<!-- 物品种类 -->
+<view class='publish'>
+  <view class='publish-name'>物品种类: </view>
+  <view class='publish-value'>{{result.category}}</view>
+</view>
+<!-- 失物地点 -->
+<view class='publish'>
+  <view class='publish-name'>失物地点: </view>
+  <view class='publish-value'>{{result.province}}</view>
+</view>
+<!-- 详细地址 -->
+<view class='address'>
+  <view class='address-name'>详细地址: </view>
+  <view class='address-value'>{{result.address}}</view>
+</view>
+
+<!-- 丢失时间 -->
+<view class='publish'>
+  <view class='publish-name'>丢失时间: </view>
+  <view class='publish-value'>{{result.losetime}}</view>
+</view>
+<!-- 图片 -->
+<view class='address'>
+  <view class='address-name'>图片: </view>
+  <view class='img-list'>
+    <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
+    <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
+    <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
+  </view>
+</view>
+
+<!-- 详细描述 -->
+<view class='address'>
+  <view class='address-name'>详细描述: </view>
+  <view class='address-value'>{{result.detaildesc}}</view>
+</view>
+<!-- 收藏按钮 -->
+<view class='collection'>
+  <view wx:if='{{collection}}' class='image'>
+    <image  src='/pages/imgs/icon/shoucang.png' mode='aspectFill'></image>收藏
+  </view>
+  <view wx:else='{{collection}}' class='image'>
+    <image  src='/pages/imgs/icon/shoucang_off.png' mode='aspectFill'></image>取消收藏
+  </view> 
+</view>
+<!-- 更新/删除按钮 d81e06 -->
+<view class='controller'>
+  <view class='update'>
+    <image  src='/pages/imgs/icon/update.png' mode='aspectFill'></image>更新
+  </view>
+  <view class='delete'>
+    <image  src='/pages/imgs/icon/delete.png' mode='aspectFill'></image>删除
+  </view>
+</view>
