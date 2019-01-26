@@ -1,1 +1,97 @@
-/* pages/myitem/myitem.wxss */
+/* 项目列表 */
+.items-list{
+  /* 弹性盒子布局 */
+  display: flex;
+  /* 主轴排列方式 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 居中显示 */
+  justify-content: space-between;
+  /* 垂直居中 */
+  align-items: center;
+  /* 设置内边距 */
+  padding: 15rpx 5rpx 0 5rpx;
+}
+.item-img>image{
+  /* 设置成块状元素 */
+  display: block;
+  /* 设置图片宽度 */
+  width: 230rpx;
+  /* 图片高度 */
+  height: 230rpx;
+  /* 图片圆角 */
+  border-radius: 10rpx;
+}
+.items-list>.item-desc{
+  /* 设置内容区宽度 */
+  width: 68%;
+  /* 设置高度 */
+  height: 230rpx;
+}
+/* 内容区样式设置 */
+.item-desc{
+  /* 弹性盒子模型布局 */
+  display: flex;
+  /* 按列排列 */
+  flex-direction: column;
+}
+/* 设置内容区描述的上下间距 */
+.item-desc>view{
+  padding-top: 10rpx;
+}
+/* 设置标题的样式 */
+.item-title{
+  /* 宽度 */
+  width: 100%;
+  /* 字体大小 */
+  font-size: 40rpx;
+  /* 字体颜色 */
+  color: #6794FF;
+  /* 设置超过一行隐藏 */
+  overflow: hidden;
+  /* 显示一行,不换行 */
+  white-space: nowrap;
+  /* 显示省略号 */
+  text-overflow: ellipsis;
+}
+/* 设置内容区类型和物品遗失时间 */
+.item-type-time{
+  /* 字体大小 */
+  font-size: 30rpx;
+  /* flex */
+  display: flex;
+  /* 排列 */
+  flex-direction: row;
+  /* 不换行 */
+  flex-wrap: nowrap;
+  /* 主轴上的对齐方式 */
+  justify-content: flex-start;
+}
+/* 设置类型样式 */
+.item-type{
+  color: #8E3BFF;
+  margin-right: 20rpx;
+}
+/* 设置时间样式 */
+.item-time{
+  color: #ABABAB;
+}
+.item-ares{
+  /* 字体大小 */
+  font-size: 30rpx;
+  /* 字体颜色 */
+  color: #ABABAB;
+}
+.item-detail{
+  /* 字体大小 */
+  font-size: 30rpx;
+  /* 字体颜色 */
+  color: #ABABAB;
+  /* 设置超过一行隐藏 */
+  overflow: hidden;
+  /* 显示一行,不换行 */
+  white-space: nowrap;
+  /* 显示省略号 */
+  text-overflow: ellipsis;
+}

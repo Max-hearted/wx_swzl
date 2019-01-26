@@ -1,2 +1,19 @@
-<!--pages/mycollection/mycollection.wxml-->
-<text>pages/mycollection/mycollection.wxml</text>
+<scroll-view scroll-y='true' style='height:100%'>
+  <block wx:for='{{items}}' wx:key='' wx:for-item='item'>
+      <navigator url='/pages/detail/detail?id={{item.id}}'>
+        <view class='items-list'>
+          <view class='item-img'>
+            <image src='{{item.imgs[0]}}' mode='aspectFill'></image>
+          </view>
+          <view class='item-desc'>
+              <view class='item-title'>{{item.title}}</view>
+              <view class='item-type-time'>
+                <text class='item-type'>{{item.category}}</text> <text class='item-time'>{{item.losetime}}</text>
+              </view>
+              <view class='item-ares'>地区: {{item.province}}</view>
+              <view class='item-detail'>详情: {{item.detaildesc}}</view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+</scroll-view>
