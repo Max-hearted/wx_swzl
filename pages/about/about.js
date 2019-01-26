@@ -62,5 +62,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 我的启事
+   */
+  myitemtap:function(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '/pages/myitem/myitem?openid=1000',
+    });
+  },
+  /**
+   * 我的收藏
+   */
+  mycollectiontap:function(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '/pages/mycollection/mycollection?openid=1000',
+    });
   }
 })

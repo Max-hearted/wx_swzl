@@ -7,16 +7,16 @@
 </view>
 
 <view class='menu-list'>
-  <view class='menu-my'>
+  <view class='menu-my' bindtap='myitemtap'>
     <image mode='aspectFill' src='/pages/imgs/icon/liebiao.png'></image>
     <view>我的启事</view>
   </view>
-  <view class='menu-my'>
+  <view class='menu-my' bindtap='mycollectiontap'>
     <image mode='aspectFill' src='/pages/imgs/icon/shoucang.png'></image>
     <view>我的收藏</view>
   </view>
-  <view class='menu-my'>
+  <button open-type='contact' class='menu-my'>
     <image mode='aspectFill' src='/pages/imgs/icon/kefu.png'></image>
     <view>联系客服</view>
-  </view>
+  </button>
 </view>
