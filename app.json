@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/publish/publish",
     "pages/about/about",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/mycollection/mycollection",
+    "pages/myitem/myitem"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,6 +35,5 @@
         "selectedIconPath": "/pages/imgs/icon/me_on.png"
       }
     ]
-  },
-  "enablePullDownRefresh": true
+  }
 }
