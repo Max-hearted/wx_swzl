@@ -11,7 +11,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#686868",
     "navigationBarTitleText": "失物招领",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance":45
   },
   "tabBar": {
     "selectedColor": "#1296db",

@@ -12,7 +12,7 @@
 -->
 <swiper circular='true' current='{{current}}' duration='600' bindchange='bindchange' style='height:{{windowHeight}}px'>
   <swiper-item>
-    <scroll-view scroll-y='true' style='height:100%'>
+    <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
       <view class='list'>
         <block wx:for='{{page.xw.items}}' wx:key='' wx:for-item='item'>
           <navigator url='/pages/detail/detail?id={{item.id}}'>
