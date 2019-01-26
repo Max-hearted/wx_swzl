@@ -96,13 +96,32 @@ Page({
     //失物详情
     var detaildesc = this.data.detaildesc;
     //图片
-    var imgs = [];
+    var imgs = this.data.imgs;
+    //构造请求参数
+    var params={};
+    params.title = title;
+    params.itemtypeid = itemtypeid;
+    params.category = category;
+    params.username = username;
+    params.losetime = losetime;
+    params.province = province;
+    params.address = address;
+    params.detaildesc = detaildesc;
+    params.imgs = imgs;
+    console.log(params);
+
   },
   /**
    * 重置表单事件
    */
   formReset:function() {
-    console.log('form发生了reset事件')
+    this.setData({
+      index:0,
+      region: ['上海市', '上海市', '闸北区'],
+      address: '',
+      detaildesc: '',
+      imgs: []
+    });
   },
   /**
    * 启事类型选择器
@@ -148,10 +167,15 @@ Page({
    * 选择图片
    */
   chooseImage:function(e){
-    console.log("选择图片",e);
+    var that = this;
     wx.chooseImage({
+      count:3,
+      sourceType: ['album', 'camera'],
       success: function(res) {
-        console.log(res);
+        //显示图片
+        that.setData({
+          imgs: res.tempFilePaths
+        });
       },
     })
   }

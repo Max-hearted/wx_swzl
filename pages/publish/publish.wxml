@@ -50,13 +50,14 @@
         <view class='s-icon'></view>
       </view>
     </view>
+    <!-- 图片显示区 -->
     <view class='img-detail'>
-      <image mode='aspectFit'  src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548410497301&di=c5313414914569aa07e5d715c52c6c60&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F764905ead01e7eca298fdadb745b3c4fd9031e2839a0d-Hdjzwh_fw658'></image>
-      <image mode='aspectFit'  src='https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg'></image>
-      <image mode='aspectFit'  src='https://img.alicdn.com/imgextra/i2/773923628/O1CN014Iksgf1cffOvVHWVP_!!773923628.jpg'></image>
+      <block wx:for='{{imgs}}' wx:key='' wx:for-item='img'>
+        <image mode='aspectFit'  src='{{img}}'></image>
+      </block>
     </view>
   </view>
-
+  <!-- 按钮区 -->
   <view class="btn-area">
     <button form-type="submit">发布</button>
     <button form-type="reset">重置</button>
