@@ -88,5 +88,43 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /**
+   * 删除
+   */
+  deleteitem:function(e){
+    console.log("删除项目的id是: ",e.currentTarget.dataset.itemid);
+    wx.showModal({
+      title: '',
+      content: '是否删除',
+      success(res){
+        if (res.confirm){
+          console.log("确定");
+          //调用后台逻辑删除项目 ... ...
+
+          
+
+          //跳转tabBar页面
+          wx.switchTab({
+            url: '/pages/home/home',
+          });
+        }else if(res.cancel){
+          console.log("取消");
+          return;
+        }else{
+          return;
+        }
+      }
+    })
+  },
+  /**
+   * 更新
+   */
+  updateitem:function(e){
+    console.log("更新项目的id是: ", e.currentTarget.dataset.itemid);
+    //跳转到更新页面
+    wx.navigateTo({
+      url: '/pages/updateitem/updateitem',
+    })
   }
 })

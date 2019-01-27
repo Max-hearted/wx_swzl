@@ -54,10 +54,10 @@
 </view>
 <!-- 更新/删除按钮 d81e06 -->
 <view class='controller'>
-  <view class='update'>
+  <view class='update' data-itemid='{{1001}}' bindtap='updateitem'>
     <image  src='/pages/imgs/icon/update.png' mode='aspectFill'></image>更新
   </view>
-  <view class='delete'>
+  <view class='delete' data-itemid='{{1001}}' bindtap='deleteitem'>
     <image  src='/pages/imgs/icon/delete.png' mode='aspectFill'></image>删除
   </view>
 </view>
