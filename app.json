@@ -5,14 +5,15 @@
     "pages/about/about",
     "pages/detail/detail",
     "pages/mycollection/mycollection",
-    "pages/myitem/myitem"
+    "pages/myitem/myitem",
+    "pages/updateitem/updateitem"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#686868",
     "navigationBarTitleText": "失物招领",
     "navigationBarTextStyle": "white",
-    "onReachBottomDistance":50
+    "onReachBottomDistance": 50
   },
   "tabBar": {
     "selectedColor": "#1296db",
