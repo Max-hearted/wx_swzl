@@ -53,7 +53,7 @@
     <!-- 图片显示区 -->
     <view class='img-detail'>
       <block wx:for='{{imgs}}' wx:key='' wx:for-item='img'>
-        <image mode='aspectFit'  src='{{img}}'></image>
+        <image mode='aspectFit'  src='{{img}}' bindlongpress='deleteimage' data-idx='{{index}}'></image>
       </block>
     </view>
   </view>

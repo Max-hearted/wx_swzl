@@ -178,5 +178,27 @@ Page({
         });
       },
     })
+  },
+  /**
+   * 删除图片
+   */
+  deleteimage:function(e){
+    var that = this;
+    //console.log(e);
+    wx.showModal({
+      title: '删除图片',
+      content: '是否删除?',
+      success:function(res){
+        if (res.confirm){
+          //获取删除图片的数组下标
+          var idx = e.currentTarget.dataset.idx;
+          var imgs = that.data.imgs;
+          imgs.splice(idx,1);
+          that.setData({
+            imgs:imgs
+          });
+        }
+      }
+    })
   }
 })
