@@ -274,7 +274,7 @@ Page({
     }
     // 显示加载图标
     wx.showLoading({
-      title: '玩命加载中'
+      title: '加载下一页'
     });
     // 图标延时
     setTimeout(function () {
