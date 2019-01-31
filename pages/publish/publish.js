@@ -1,17 +1,10 @@
-// pages/publish/publish.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     index:0,
-    array:[
-      {id:1001,name:'寻物启事'},
-      {id:1002,name:'寻人启事'},
-      {id:1003,name:"寻宠启事"},
-      {id:1004,name:"失物招领"}
-    ],
+    array:[],
     date:'2019-01-01',
     region: ['上海市', '上海市', '闸北区'],
     address:'',
@@ -23,7 +16,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    //获取启事类型列表
+    wx.request({
+      url: 'http://localhost:8080/queryItemTypelist',
+      method:'GET',
+      dataType:'json',
+      success:function(e){
+        that.setData({
+          array: e.data
+        });
+      }
+    })
+    
   },
 
   /**
@@ -86,7 +91,7 @@ Page({
     //物品种类
     var category = e.detail.value.category;
     //发布人
-    var username = e.detail.value.username;
+    var provider = e.detail.value.username;
     //遗失日期
     var losetime = e.detail.value.losetime;
     //选择地区
