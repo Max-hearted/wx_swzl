@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -24,11 +25,11 @@ Page({
       dataType:'json',
       success:function(e){
         that.setData({
-          array: e.data
+          array: e.data,
+          openid: app.globalData.openid
         });
       }
     })
-    
   },
 
   /**
@@ -83,7 +84,7 @@ Page({
    * 提交表单事件
    */
   formSubmit:function(e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    //console.log('form发生了submit事件，携带数据为：', e.detail.value)
     //标题
     var title = e.detail.value.title;
     //启事类型
@@ -102,19 +103,42 @@ Page({
     var detaildesc = this.data.detaildesc;
     //图片
     var imgs = this.data.imgs;
+    //获取转换之后的图片
+    var imglist = this.data.imglist;
+    //openid
+    var openid = this.data.openid;
     //构造请求参数
     var params={};
     params.title = title;
     params.itemtypeid = itemtypeid;
     params.category = category;
-    params.username = username;
+    params.username = provider;
     params.losetime = losetime;
     params.province = province;
     params.address = address;
     params.detaildesc = detaildesc;
     params.imgs = imgs;
-    console.log(params);
+    params.imglist = imglist;
+    params.openid = openid;
 
+    //console.log(params);
+    wx.request({
+      url: 'http://localhost:8080/publishItem',
+      method:'post',
+      dataType:'json',
+      data:params,
+      success(e){
+        console.log(e);
+        if(e.data=='ok'){
+            //跳转到列表
+            wx.switchTab({
+              url: '/pages/home/home',
+            })
+        }else{
+          //不跳转直接提示发布失败
+        }
+      }
+    })
   },
   /**
    * 重置表单事件
@@ -125,7 +149,8 @@ Page({
       region: ['上海市', '上海市', '闸北区'],
       address: '',
       detaildesc: '',
-      imgs: []
+      imgs: [],
+      imglist:[]
     });
   },
   /**
@@ -173,13 +198,28 @@ Page({
    */
   chooseImage:function(e){
     var that = this;
+    var imglist=[];
     wx.chooseImage({
       count:3,
       sourceType: ['album', 'camera'],
       success: function(res) {
+        //上传图片
+        for (var i = 0; i < res.tempFilePaths.length;i++){
+          wx.uploadFile({
+            url: 'http://localhost:8080/uploadImages',
+            filePath: res.tempFilePaths[i],
+            name: 'file',
+            success(rs) {
+              console.log(rs.data);
+              imglist.push(rs.data);
+            }
+          })
+        }
+       
         //显示图片
         that.setData({
-          imgs: res.tempFilePaths
+          imgs: res.tempFilePaths,
+          imglist: imglist
         });
       },
     })

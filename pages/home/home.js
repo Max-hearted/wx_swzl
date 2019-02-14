@@ -149,7 +149,10 @@ Page({
           windowWidth:res.windowWidth
         });
       },
-    })
+    });
+    //获取数据列表 第一页 每页显示十个项目
+    
+
   },
 
   /**
