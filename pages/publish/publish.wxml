@@ -15,7 +15,7 @@
 
   <!-- 发布人同微信名不允许修改 -->
   <view class='publish'>
-      <view class='qs-name'>发布人 </view> <input name='username' class='category-value' disabled='true' value='姑苏城外一书生'></input>
+      <view class='qs-name'>发布人 </view> <input name='username' class='category-value' value='姑苏城外一书生'></input>
   </view>
 
   <!-- 丢失日期 -->

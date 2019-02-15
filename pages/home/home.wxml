@@ -14,11 +14,11 @@
   <swiper-item>
     <scroll-view scroll-y='true' style='height:{{windowHeight}}px'>
       <view class='list'>
-        <block wx:for='{{page.xw.items}}' wx:key='' wx:for-item='item'>
+        <block wx:for='{{page.items}}' wx:key='' wx:for-item='item'>
           <navigator url='/pages/detail/detail?id={{item.id}}'>
             <view class='items-list'>
               <view class='item-img'>
-                <image src='{{item.imgs[2]}}' mode='aspectFill'></image>
+                <image src='{{item.imgs[0]}}' mode='aspectFill'></image>
               </view>
               <view class='item-desc'>
                   <view class='item-title'>{{item.title}}</view>
