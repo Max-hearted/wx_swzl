@@ -47,11 +47,11 @@
   <view class='address-value'>{{result.detaildesc}}</view>
 </view>
 <!-- 更新/删除按钮 d81e06 -->
-<!-- <view class='controller'>
+<view class='controller'>
   <view class='update' data-itemid='{{result.itemId}}' bindtap='updateitem'>
     <image  src='/pages/imgs/icon/update.png' mode='aspectFill'></image>更新
   </view>
   <view class='delete' data-itemid='{{result.itemId}}' bindtap='deleteitem'>
     <image  src='/pages/imgs/icon/delete.png' mode='aspectFill'></image>删除
   </view>
-</view> -->
+</view>

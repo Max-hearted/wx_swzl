@@ -5,7 +5,9 @@
     "pages/about/about",
     "pages/detail/detail",
     "pages/myitem/myitem",
-    "pages/updateitem/updateitem"
+    "pages/updateitem/updateitem",
+    "pages/login/login",
+    "pages/myitemdetail/myitemdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

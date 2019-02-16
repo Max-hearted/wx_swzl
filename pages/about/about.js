@@ -6,14 +6,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var avatarUrl = app.globalData.avatarUrl;
+    var username = app.globalData.username;
+    var gender = app.globalData.gender;
+    this.setData({
+      avatarUrl: avatarUrl,
+      username: username,
+      gender: gender
+    });
   },
 
   /**
@@ -27,6 +34,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
 
   },
 

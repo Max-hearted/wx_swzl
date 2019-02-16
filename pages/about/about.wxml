@@ -1,8 +1,8 @@
 <view class='user'>
-  <image class='user-header' mode='aspectFill'  src='https://img.alicdn.com/imgextra/i2/773923628/O1CN011cffOMOJ9OHUzGT_!!773923628.jpg'></image>
+  <image class='user-header' mode='aspectFill'  src='{{avatarUrl}}'></image>
   <view class='user-body'>
-    <view class='username'>姑苏城外一书生</view>
-    <view class='gender'>男</view>
+    <view class='username'>{{username}}</view>
+    <view class='gender'>{{gender==1?'男':'女'}}</view>
   </view>
 </view>
 

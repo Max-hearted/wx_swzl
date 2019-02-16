@@ -7,7 +7,7 @@ Page({
    * collection:是否收藏
    */
   data: {
-    collection:false,
+    collection: false,
     result: {},
     openid: app.globalData.openid
   },
@@ -21,10 +21,10 @@ Page({
 
     wx.request({
       url: 'http://localhost:8080/queryItemByItemId',
-      dataType:'json',
-      method:'get',
-      data:{'itemId':options.id},
-      success(e){
+      dataType: 'json',
+      method: 'get',
+      data: { 'itemId': options.id },
+      success(e) {
         console.log(e.data);
         that.setData({
           result: e.data
@@ -32,7 +32,7 @@ Page({
       }
     })
 
-    
+
   },
 
   /**
@@ -86,36 +86,36 @@ Page({
   /**
    * 删除
    */
-  deleteitem:function(e){
-    console.log("删除项目的id是: ",e.currentTarget.dataset.itemid);
+  deleteitem: function (e) {
+    console.log("删除项目的id是: ", e.currentTarget.dataset.itemid);
     wx.showModal({
       title: '',
       content: '是否删除',
-      success(res){
-        if (res.confirm){
+      success(res) {
+        if (res.confirm) {
           console.log("确定");
           //调用后台逻辑删除项目 ... ...
           wx.request({
             url: 'http://localhost:8080/deleteItem',
-            method:'get',
-            dataType:'json',
-            data:{
+            method: 'get',
+            dataType: 'json',
+            data: {
               'itemId': e.currentTarget.dataset.itemid
             },
-            success(result){
+            success(result) {
               console.log(result);
             }
           })
-          
+
 
           //跳转tabBar页面
           wx.switchTab({
             url: '/pages/home/home',
           });
-        }else if(res.cancel){
+        } else if (res.cancel) {
           console.log("取消");
           return;
-        }else{
+        } else {
           return;
         }
       }
@@ -124,7 +124,7 @@ Page({
   /**
    * 更新
    */
-  updateitem:function(e){
+  updateitem: function (e) {
     console.log("更新项目的id是: ", e.currentTarget.dataset.itemid);
     //跳转到更新页面
     wx.navigateTo({

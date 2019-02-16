@@ -1,0 +1,99 @@
+/* 背景色 */
+page{
+  background-color: #ccc;
+}
+/* 标题样式 */
+.title{
+  font-family: '微软雅黑';
+  background-color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: rgb(30, 172, 228);
+  text-align: center;
+  padding: 20rpx 10rpx 20rpx 10rpx;
+  margin-top: 6rpx;
+}
+/* 发布者 */
+.publish{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 15rpx 10rpx 15rpx 10rpx;
+  background-color: #fff;
+  margin-top: 3rpx;
+}
+.publish-name{
+  font-size: 35rpx;
+  color: rgb(145, 143, 143);
+}
+.publish-value{
+  font-size: 35rpx;
+}
+.address{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 3rpx;
+  padding: 15rpx 10rpx 15rpx 10rpx;
+}
+.address-name{
+  font-size: 35rpx;
+  color: rgb(145, 143, 143);
+}
+.address-value{
+  margin: 10rpx 0;
+  font-size: 35rpx;
+  line-height: 1.5em;
+}
+.img-list{
+  margin-top: 20rpx;
+  text-align: center;
+}
+.collection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  justify-content: center;
+  margin-top: 5rpx;
+}
+.collection>.image>image{
+  width: 70rpx;
+  height: 70rpx;
+  padding: 10rpx;
+}
+.image{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: rgb(41, 153, 197);
+}
+.controller{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  justify-content: space-around;
+  margin-top: 5rpx;
+  padding: 15rpx 0;
+}
+.update>image{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+}
+.delete>image{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 10rpx;
+}
+.update,.delete{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
