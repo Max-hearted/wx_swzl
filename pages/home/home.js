@@ -19,7 +19,7 @@ Page({
       "pagesize": 20,
       "items": [
         {
-          "id": 1001,
+          "itemId": 1001,
           "title": "学府路丢失银白色笔记本电脑一台",
           "user": {
             "id": 2001,
@@ -159,6 +159,33 @@ Page({
     that.setData({
       current:nav
     });
+    var typeName="寻物启事";
+    if(nav==0){
+      typeName = "寻物启事";
+    } else if (nav == 1){
+      typeName = "寻人启事";
+    } else if (nav == 2){
+      typeName = "寻宠启事";
+    } else if (nav == 3){
+      typeName = "失物招领";
+    }
+    //获取数据
+    wx.request({
+      url: 'http://localhost:8080/getPageItems',
+      method:'GET',
+      dataType:'json',
+      data:{
+        'pageNo':1,
+        'pageSize':5,
+        'typeName': typeName
+      },
+      success(res){
+        console.log("数据列表:", res.data);
+        that.setData({
+          page: res.data
+        });
+      }
+    })
   },
   /**
    * 左右滑动滑块触发事件
@@ -166,36 +193,37 @@ Page({
   bindchange:function(e){
     var that = this;
     var current = e.detail.current;
-
-    switch (current) {
-      case 0:
-        // 寻物启事
-        console.log("0", current);
-
-        break;
-      case 1:
-        //寻人
-        console.log("1", current);
-
-        break;
-      case 2:
-        //寻宠
-        console.log("2", current);
-
-        break;
-      case 3:
-        //失物招领
-        console.log("3", current);
-
-        break;
-      default:
-        console.log("current不存在", current);
-    }
-
-
     this.setData({
-      current: e.detail.current
+      current: current
     });
+
+    var typeName = "寻物启事";
+    if (current == 0) {
+      typeName = "寻物启事";
+    } else if (current == 1) {
+      typeName = "寻人启事";
+    } else if (current == 2) {
+      typeName = "寻宠启事";
+    } else if (current == 3) {
+      typeName = "失物招领";
+    }
+    //获取数据
+    wx.request({
+      url: 'http://localhost:8080/getPageItems',
+      method: 'GET',
+      dataType: 'json',
+      data: {
+        'pageNo': 1,
+        'pageSize': 5,
+        'typeName': typeName
+      },
+      success(res) {
+        console.log("数据列表:", res.data);
+        that.setData({
+          page: res.data
+        });
+      }
+    })
   }
 
 })
