@@ -16,7 +16,7 @@ Page({
     page: {
       "hasnext": true,
       "pageno": 1,
-      "pagesize": 20,
+      "pagesize": 5,
       "items": [
         {
           "itemId": 1001,
@@ -49,6 +49,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    var current = that.data.current;
     //获取系统高度
     wx.getSystemInfo({
       success: function(res) {
@@ -58,8 +59,33 @@ Page({
         });
       },
     });
-    //获取数据列表 第一页 每页显示十个项目
-    
+    //获取数据列表 第1页 每页显示5个项目
+    var typeName = "寻物启事";
+    if (current == 0) {
+      typeName = "寻物启事";
+    } else if (current == 1) {
+      typeName = "寻人启事";
+    } else if (current == 2) {
+      typeName = "寻宠启事";
+    } else if (current == 3) {
+      typeName = "失物招领";
+    }
+    //获取数据
+    wx.request({
+      url: 'http://localhost:8080/getPageItems',
+      method: 'GET',
+      dataType: 'json',
+      data: {
+        'pageNo': 1,
+        'pageSize': 5,
+        'typeName': typeName
+      },
+      success(res) {
+        that.setData({
+          page: res.data
+        });
+      }
+    })
 
   },
 
@@ -108,30 +134,6 @@ Page({
     var that = this;
     var current = that.data.current;
 
-    switch(current){
-      case 0:
-        // 寻物启事xw
-        console.log("0",current);
-        
-        break;
-      case 1:
-        //寻人
-        console.log("1",current);
-        
-        break;
-      case 2:
-        //寻宠
-        console.log("2",current);
-        
-        break;
-      case 3:
-        //失物招领
-        console.log("3",current);
-       
-        break;
-      default:
-        console.log("current不存在",current);
-    }
     // 显示加载图标
     wx.showLoading({
       title: '加载下一页'
@@ -139,7 +141,59 @@ Page({
     // 图标延时
     setTimeout(function () {
       wx.hideLoading()
-    }, 2000);
+    }, 1000);
+
+    //加载下一页数据
+    var hasnext = that.data.page.hasnext;
+    if(hasnext){
+      //获取当前页
+      var pageNo = that.data.page.pageno+1;
+      var pageSize = that.data.page.pagesize;
+      var typeName = "寻物启事";
+      if (current == 0) {
+        typeName = "寻物启事";
+      } else if (current == 1) {
+        typeName = "寻人启事";
+      } else if (current == 2) {
+        typeName = "寻宠启事";
+      } else if (current == 3) {
+        typeName = "失物招领";
+      }
+
+      //获取数据
+      wx.request({
+        url: 'http://localhost:8080/getPageItems',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+          'pageNo': pageNo,
+          'pageSize': pageSize,
+          'typeName': typeName
+        },
+        success(res) {
+          // console.log("数据列表:", res.data);
+          // console.log("元数据：",that.data.page.items);
+          var items_n = that.data.page.items.concat(res.data.items);
+          //console.log("数据列表new:", items_n);
+          var result = res.data;
+          result.items = items_n;
+          that.setData({
+            page: result
+          });
+        }
+      })
+
+
+    }else{
+      //不加载，提示已经是最后一页
+      wx.showLoading({
+        title: '最后一页'
+      });
+      // 图标延时
+      setTimeout(function () {
+        wx.hideLoading()
+      }, 500);
+    }
   },
 
   /**
@@ -180,7 +234,7 @@ Page({
         'typeName': typeName
       },
       success(res){
-        console.log("数据列表:", res.data);
+        //console.log("数据列表:", res.data);
         that.setData({
           page: res.data
         });
@@ -218,7 +272,7 @@ Page({
         'typeName': typeName
       },
       success(res) {
-        console.log("数据列表:", res.data);
+        //console.log("数据列表:", res.data);
         that.setData({
           page: res.data
         });

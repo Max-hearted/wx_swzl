@@ -10,12 +10,7 @@ Page({
     result: {
       "id": 1001,
       "title": "学府路丢失银白色笔记本电脑一台",
-      "user": {
-        "id": 2001,
-        "name": "李雷",
-        "email": "hd1611756908@163.com",
-        "openid":"1234455223432423"
-      },
+      "provider": "李雷",
       "category": "电脑",
       "itemtype": {
         "id": 4001,
@@ -39,6 +34,22 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
+    var that = this;
+
+    wx.request({
+      url: 'http://localhost:8080/queryItemByItemId',
+      dataType:'json',
+      method:'get',
+      data:{'itemId':options.id},
+      success(e){
+        console.log(e.data);
+        that.setData({
+          result: e.data
+        });
+      }
+    })
+
+    
   },
 
   /**
