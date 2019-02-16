@@ -35,7 +35,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("我的启事列表",options);
+    console.log("我的启事列表",options.openid);
+    var that = this;
+
+    wx.request({
+      url: 'http://localhost:8080/queryItemList',
+      method:'get',
+      data:{
+        'openid': options.openid
+      },
+      dataType:'json',
+      success(e){
+        console.log(e.data);
+        that.setData({
+          items: e.data
+        });
+      }
+    })
   },
 
   /**

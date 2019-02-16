@@ -14,6 +14,21 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime
+/**
+ * 查询当前对象在数组中的位置
+ * 返回索引值
+ */
+function indexOf_(arr,obj){
+  for(var i=0;i<arr.length;i++){
+    if(arr[i].id==obj){
+      return i
+    }
+  }
 }
+
+module.exports = {
+  formatTime: formatTime,
+  indexOf_: indexOf_
+}
+
+

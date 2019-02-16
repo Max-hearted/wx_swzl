@@ -93,7 +93,17 @@ Page({
         if (res.confirm){
           console.log("确定");
           //调用后台逻辑删除项目 ... ...
-
+          wx.request({
+            url: 'http://localhost:8080/deleteItem',
+            method:'get',
+            dataType:'json',
+            data:{
+              'itemId': e.currentTarget.dataset.itemid
+            },
+            success(result){
+              console.log(result);
+            }
+          })
           
 
           //跳转tabBar页面
@@ -116,7 +126,7 @@ Page({
     console.log("更新项目的id是: ", e.currentTarget.dataset.itemid);
     //跳转到更新页面
     wx.navigateTo({
-      url: '/pages/updateitem/updateitem',
+      url: '/pages/updateitem/updateitem?id=' + e.currentTarget.dataset.itemid,
     })
   }
 })

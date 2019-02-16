@@ -4,7 +4,6 @@
     "pages/publish/publish",
     "pages/about/about",
     "pages/detail/detail",
-    "pages/mycollection/mycollection",
     "pages/myitem/myitem",
     "pages/updateitem/updateitem"
   ],

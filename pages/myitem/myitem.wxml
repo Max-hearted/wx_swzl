@@ -1,6 +1,6 @@
 <scroll-view scroll-y='true' style='height:100%'>
   <block wx:for='{{items}}' wx:key='' wx:for-item='item'>
-      <navigator url='/pages/detail/detail?id={{item.id}}'>
+      <navigator url='/pages/detail/detail?id={{item.itemId}}'>
         <view class='items-list'>
           <view class='item-img'>
             <image src='{{item.imgs[0]}}' mode='aspectFill'></image>

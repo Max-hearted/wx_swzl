@@ -48,14 +48,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
     var that = this;
     var current = that.data.current;
     //获取系统高度
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         that.setData({
-          windowHeight:res.windowHeight-45,
-          windowWidth:res.windowWidth
+          windowHeight: res.windowHeight - 45,
+          windowWidth: res.windowWidth
         });
       },
     });
@@ -86,21 +101,6 @@ Page({
         });
       }
     })
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
   },
 
   /**

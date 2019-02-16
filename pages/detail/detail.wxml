@@ -32,9 +32,12 @@
 <view class='address'>
   <view class='address-name'>图片: </view>
   <view class='img-list'>
-    <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
-    <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
-    <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
+    <block wx:for='{{result.imgs}}' wx:key='' wx:for-item='item'>
+      <image src='{{item}}' mode='aspectFill'></image>
+    </block>
+    
+    <!-- <image src='{{result.imgs[0]}}' mode='aspectFill'></image>
+    <image src='{{result.imgs[0]}}' mode='aspectFill'></image> -->
   </view>
 </view>
 
@@ -43,21 +46,12 @@
   <view class='address-name'>详细描述: </view>
   <view class='address-value'>{{result.detaildesc}}</view>
 </view>
-<!-- 收藏按钮 -->
-<view class='collection'>
-  <view wx:if='{{collection}}' class='image'>
-    <image  src='/pages/imgs/icon/shoucang.png' mode='aspectFill'></image>收藏
-  </view>
-  <view wx:else='{{collection}}' class='image'>
-    <image  src='/pages/imgs/icon/shoucang_off.png' mode='aspectFill'></image>取消收藏
-  </view> 
-</view>
 <!-- 更新/删除按钮 d81e06 -->
 <view class='controller'>
-  <view class='update' data-itemid='{{1001}}' bindtap='updateitem'>
+  <view class='update' data-itemid='{{result.itemId}}' bindtap='updateitem'>
     <image  src='/pages/imgs/icon/update.png' mode='aspectFill'></image>更新
   </view>
-  <view class='delete' data-itemid='{{1001}}' bindtap='deleteitem'>
+  <view class='delete' data-itemid='{{result.itemId}}' bindtap='deleteitem'>
     <image  src='/pages/imgs/icon/delete.png' mode='aspectFill'></image>删除
   </view>
 </view>

@@ -1,4 +1,5 @@
 // pages/about/about.js
+const app = getApp();
 Page({
 
   /**
@@ -67,18 +68,9 @@ Page({
    * 我的启事
    */
   myitemtap:function(e){
-    console.log(e);
+    var openid = app.globalData.openid;
     wx.navigateTo({
-      url: '/pages/myitem/myitem?openid=1000',
-    });
-  },
-  /**
-   * 我的收藏
-   */
-  mycollectiontap:function(e){
-    console.log(e);
-    wx.navigateTo({
-      url: '/pages/mycollection/mycollection?openid=1000',
+      url: '/pages/myitem/myitem?openid=' + openid,
     });
   }
 })
